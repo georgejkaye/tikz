@@ -1,0 +1,16 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ xparse }
+\usepackage{ etoolbox }
+
+\input{macros/category-tikz}
+
+\newtoggle{arrowlabels}
+
+\begin{document}
+\begin{tikzcd}
+    L \arrow[swap]{d}{\iftoggle{arrowlabels}{h}{}} & K \arrow[swap]{l}{\iftoggle{arrowlabels}{f}{}}\arrow{r}{\iftoggle{arrowlabels}{g}{}}\arrow{d}{\iftoggle{arrowlabels}{k}{}} & R \arrow{d}\\
+    G \arrow[ur, phantom, "\usebox\pushoutl" , very near start, color=black] & C \arrow{l} \arrow{r} & H \arrow[ul, phantom, "\usebox\pushoutr" , very near start, color=black] \\
+    & J \arrow{ul}\arrow{ur}\arrow{u} &
+\end{tikzcd}
+\end{document}

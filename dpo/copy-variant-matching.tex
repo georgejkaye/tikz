@@ -1,0 +1,13 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ tikzit }
+\input{hypergraphs.tikzstyles}
+
+\begin{document}
+    
+\begin{tikzcd}
+   \tikzfig{graphs/copy-rule-l} \arrow{d} & \arrow{r} \tikzfig{graphs/interfaces/in-0-out-1-2} \arrow{l} & \tikzfig{graphs/copy-rule-r-variant} \\
+   \tikzfig{graphs/dpo/matchings/outputs-outputs/alpha-beta-gamma} & &
+\end{tikzcd}
+
+\end{document}

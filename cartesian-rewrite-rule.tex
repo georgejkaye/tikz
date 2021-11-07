@@ -1,0 +1,15 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ svg }
+\usepackage{ xparse }
+\input{macros/all}
+
+\svgpath{./../svgs/.}
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = large]
+    \raisebox{-0.6em}{\includehypergraph{dpo/example-l}} & \raisebox{-0.15em}{\includehypergraph{dpo/example-k}} \arrow{l} \arrow{r} & \raisebox{-1.05em}{\includehypergraph{dpo/example-r}}
+\end{tikzcd}
+
+\end{document}

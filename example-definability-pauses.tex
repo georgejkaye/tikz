@@ -1,0 +1,43 @@
+\documentclass[beamer]{standalone}
+\usepackage{ tikz }
+\usepackage{ amssymb }
+\usepackage{ xparse }
+\input{macros/all}
+
+\usepackage{ beamerpreamble }
+
+\begin{document}
+\begin{tikzpicture}[yscale=-1,x=1em,y=1em]
+
+    \draw [rounded corners, visible on=<4->] (8,1.25) -- (4.5,1.25) -- (3,0) -- (2,0) -- (2, -1) -- (10, -1) -- (10, -0.25) -- (9.25,-0.25);
+    \draw [rounded corners, visible on=<3>] (2.5,0) -- (2,0) -- (2, -1) -- (10, -1) -- (10, -0.25) -- (9.25,-0.25);
+
+
+    \draw [rounded corners, visible on=<4->] (8,1.75) -- (7,1.75) -- (6,3) -- (0,3);
+    \draw [rounded corners, visible on=<3>] (2.5,3) -- (0,3);
+    
+    \draw [rounded corners, visible on=<4->] (8,0) -- (4,0) -- (3,2) -- (0,2) -- (0,-2) -- (12,-2) -- (12,1.5) -- (9.25,1.5);
+    \draw [rounded corners, visible on=<3>]  (2.5,2) -- (0,2) -- (0,-2) -- (12,-2) -- (12,1.5) -- (9.25,1.5);
+
+    \draw [rounded corners, visible on=<5->] (12,3) -- (7,3) -- (6,2) -- (4,2) -- (3,1) -- (1,1) -- (1,-1.5) -- (11, -1.5) -- (11, 0.25) -- (9.25, 0.25);
+    \draw [rounded corners, visible on=<4>]  (8,3) -- (7,3) -- (6,2) -- (4,2) -- (3,1) -- (1,1) -- (1,-1.5) -- (11, -1.5) -- (11, 0.25) -- (9.25, 0.25);
+    \draw [rounded corners, visible on=<3>]  (2.5,1) -- (1,1) -- (1,-1.5) -- (11, -1.5) -- (11, 0.25) -- (9.25, 0.25);
+
+    \draw [visible on=<5->] (0,4) -- (12,4);
+    \draw [visible on=<4>] (0,4) -- (8,4);
+    \draw [visible on=<3>] (0,4) -- (2.5,4);
+
+    \draw [visible on=<2-3>] (8,0) -- (7,0);
+    \draw [visible on=<2-3>] (8,1.25) -- (7,1.25);
+    \draw [visible on=<2-3>] (8,1.75) -- (7,1.75);
+    \draw [visible on=<2>] (9.25,-0.25) -- (10, -0.25);
+    \draw [visible on=<2>] (9.25, 0.25) -- (10, 0.25);
+    \draw [visible on=<2>] (9.25, 1.5) -- (10,1.5);
+
+    \node [draw, minimum height = 1.25em, minimum width = 1.25em, anchor=west, visible on=<2->] at (8,0) {\scalebox{0.75}{$\phi$}};
+    \node [draw, minimum height = 1.25em, minimum width = 1.25em, anchor=west, visible on=<2->] at (8,1.5) {\scalebox{0.75}{$\psi$}};
+
+    \node [anchor=center, visible on=<6->] at (6,5) {\scalebox{0.8}{Tr$^3(\swap{2}{1} \tensor \id[2] \seq \id[2] \tensor \swap{1}{1} \tensor \id[1] \seq \phi \tensor \psi \tensor \,\id[2])$}};
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,28 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ amsmath }
+\usepackage{ amssymb }
+\usepackage{ stmaryrd }
+\usepackage{ svg }
+\usepackage{ xparse }
+\usepackage{../../macros}
+
+\svgpath{./../../svgs/.}
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = large]
+    \raisebox{-0.3em}{\includehypergraph{dpo/example-l-linear}} \arrow[Rightarrow]{r}{\htrim{-}} \arrow{d} & 
+    \raisebox{-0.65em}{\includehypergraph{dpo/example-l}} \arrow{d} & 
+    \raisebox{-0.15em}{\includehypergraph{dpo/example-k}} \arrow{l} \arrow{r} \arrow{d}& 
+    \raisebox{-1em}{\includehypergraph{dpo/example-r}}& 
+    \raisebox{-1em}{\includehypergraph{dpo/example-r-linear}} \arrow[Rightarrow,swap]{l}{\htrim{-}} \\
+    \raisebox{-1em}{\includehypergraph{dpo/example-g-int}} \arrow[Rightarrow,swap]{r}{\htrim{-}} \arrow[Rightarrow,bend right]{drr}{\io{-}} &
+    \raisebox{-1em}{\includehypergraph{dpo/example-g}} & 
+    \raisebox{-0.75em}{\includehypergraph{dpo/example-c}} \arrow{l} & 
+    & 
+    & \\
+    & & \includehypergraph{dpo/example-j} \arrow{u}\arrow{ul} &
+\end{tikzcd}
+
+\end{document}

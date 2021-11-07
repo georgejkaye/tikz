@@ -1,0 +1,16 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ xparse }
+\usepackage{ standalone }
+\usepackage{ macros }
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = large]
+    \raisebox{-1em}{\includestandalone{tikz/strings/frobenius/frobenius-left-lhs}} \,\,\ar[equal]{r}{Frob} \ar[equal]{d}{Cart} &
+    \,\, \raisebox{-1.25em}{\includestandalone{tikz/strings/frobenius/frobenius-left-rhs}} \ar[equal]{d}{Cart} \\
+    \raisebox{-1.5em}{\includestandalone{tikz/strings/frobenius/frobenius-cartesian-l-rhs}} \ar[equal, "/" marking]{r}{} &
+    \,\, \raisebox{-2em}{\includestandalone{tikz/strings/frobenius/frobenius-cartesian-r-rhs}}
+\end{tikzcd}
+
+\end{document}

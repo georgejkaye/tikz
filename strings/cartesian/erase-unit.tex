@@ -1,0 +1,18 @@
+\documentclass{standalone}
+\usepackage{ tikz }
+\usetikzlibrary{shapes}
+\usetikzlibrary{plotmarks}
+\usepackage{ xparse }
+\usepackage{../../../macros}
+
+\begin{document}
+\begin{tikzpicture}[yscale=-1,x=1em,y=1.25em]
+    \node [anchor=east] at (-1,0) {$I$};
+    \draw [dashed] (-1,0) -- (0,0);
+    \node (C1) [draw, circle, fill=white, scale=0.4] at (0,0) {};
+
+    \node at (1,0) {$=$};
+
+    \node[draw,dashed,minimum width=2em,minimum height=2em] at (3,0) {};
+\end{tikzpicture}
+\end{document}

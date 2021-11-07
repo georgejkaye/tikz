@@ -1,0 +1,14 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ svg }
+\usepackage{../../macros}
+
+\svgpath{./../../svgs/.}
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = tiny]
+   \raisebox{-1.4em}{\includesvg{graphs/operations/empty}} \arrow{r} & \raisebox{-2.1em}{\includesvg{graphs/operations/trace-loop}} & \arrow{l} \raisebox{-1.4em}{\includesvg{graphs/operations/empty}}
+\end{tikzcd}
+
+\end{document}

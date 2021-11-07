@@ -1,0 +1,13 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+
+\input{ macros/streams }
+
+\begin{document}
+\begin{tikzcd}[row sep = large, column sep = large]
+    \textbf{R} \arrow{r}{h} \arrow{d}[swap]{\langle \autoo_A,\autot_A \rangle} & 
+    \textbf{T} \arrow{d}{\langle \autoo_B,\autot_B \rangle} \\
+    (\textbf{N} \times \textbf{R})^\textbf{M} \arrow{r}[swap]{Mh} & 
+    (\textbf{N} \times \textbf{T})^\textbf{M}
+\end{tikzcd}
+\end{document}

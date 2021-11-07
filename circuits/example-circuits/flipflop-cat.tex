@@ -1,0 +1,26 @@
+\documentclass{standalone}
+\usepackage{ tikz }
+\usepackage{ xparse }
+\usepackage{../../../macros}
+\usepackage{amssymb}
+
+\begin{document}
+\begin{tikzpicture}[yscale=-1,x=1em,y=1.25em]
+        
+    \draw (-2,0.25) -- (1,0.25);
+    \node [draw, anchor=west, minimum width=2em, minimum height = 1.5em] at (1,0.5) {\scalebox{0.75}{$NOR$}};
+    \draw (3.2,0.5) -- (6,0.5);
+    \filldraw (4,0.5) circle (1pt);
+    \draw [rounded corners] (4,0.5) -- (4,1.5) -- (-1,2.5) -- (-1,3.25) -- (-0.25,3.25);
+    \draw (0,3.25) circle (0.25em);
+    \draw (0.25,3.25) -- (1,3.25);
+    \draw (-2, 3.75) -- (1,3.75);
+    \node [draw, anchor=west, minimum width=2em,  minimum height = 1.5em] at (1,3.5) {\scalebox{0.75}{$NOR$}};
+    \draw (3.2,3.5) -- (6,3.5);
+    \filldraw (4,3.5) circle (1pt);
+    \draw [rounded corners] (4,3.5) -- (4,2.5) -- (-1,1.5) -- (-1,0.75) -- (-0.25,0.75);
+    \draw (0,0.75) circle (0.25em);
+    \draw (0.25,0.75) -- (1,0.75);
+
+\end{tikzpicture}
+\end{document}

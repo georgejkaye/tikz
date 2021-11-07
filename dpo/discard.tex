@@ -1,0 +1,13 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ etoolbox }
+\usepackage{ tikzit }
+\input{hypergraphs.tikzstyles}
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = tiny]
+   \tikzfig{graphs/discard-rule-l} & \arrow{l} \tikzfig{graphs/interfaces/in-0} \arrow{r} & \tikzfig{graphs/operations/discard}
+\end{tikzcd}
+
+\end{document}

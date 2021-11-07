@@ -1,0 +1,18 @@
+\documentclass{standalone}
+\usepackage{ tikz }
+\usepackage{ xparse }
+\usepackage{ amssymb }
+\usepackage{../../macros}
+
+\begin{document}
+\begin{tikzpicture}[yscale=-1,x=1em,y=1.25em]
+
+    \node at (1,-1.5) {$\morph{\fork}{1}{2}$};
+
+    \draw (0,0) -- (1,0);
+    \filldraw (1,0) circle (1pt);
+    \draw [rounded corners]  (1,0) -- (1,-0.5) -- (2,-0.5);
+    \draw [rounded corners]  (1,0) -- (1,0.5) -- (2,0.5);
+
+\end{tikzpicture}
+\end{document}

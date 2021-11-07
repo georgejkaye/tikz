@@ -1,0 +1,16 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ xparse }
+\usepackage{ etoolbox }
+
+\input{ macros/category-tikz }
+
+\newtoggle{arrowlabels}
+
+\begin{document}
+\begin{tikzcd}[column sep = huge]
+    L \arrow[swap]{d}{f} & m + n \arrow[swap]{l}{a := [a_1,a_2]}\arrow{d}{c := [c_1,c_2]} \\
+    G \arrow[ur, phantom, "\usebox\pushoutl" , very near start, color=black] & C \arrow{l} \\
+    & m+n \arrow{ul}{b := [b_1,b_2]}\arrow[swap]{u}{[d_1,d_2]}
+\end{tikzcd}
+\end{document}

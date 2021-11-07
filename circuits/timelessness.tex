@@ -1,0 +1,26 @@
+\documentclass{standalone}
+\usepackage{ tikz }
+\usepackage{ xparse }
+\usepackage{../../macros}
+
+\begin{document}
+\begin{tikzpicture}[yscale=-1,x=1em,y=1.25em]
+
+    \draw (0,0) -- (1,0);
+    \draw (1.5,0) circle (0.5em);
+    \draw (2,0) -- (3,0);
+
+    \node [draw, minimum width=2em, minimum height=1.5em] at (4,0) {$k$};
+  
+    \draw (5,0) -- (6,0);
+
+    \node at (7,0) {$=$};
+
+    \draw (8,0) -- (9,0);
+    \node [draw, minimum width=2em, minimum height=1.5em] at (10,0) {$k$};
+    \draw (11,0) -- (12,0);
+    \draw (12.5,0) circle (0.5em);
+    \draw (13,0) -- (14,0);
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,16 @@
+\documentclass[beamer]{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ svg }
+\usepackage{ ../../beamerpreamble }
+
+\svgpath{./../../svgs/.}
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = tiny]
+   |[visible on=<3->]|\raisebox{-1.6em}{\includesvg{graphs/interfaces/in-0-1}} \arrow[visible on=<3->]{r} & 
+   \raisebox{-3.5em}{\includesvg{graphs/examples/traced}} & 
+   |[visible on=<3->]|\raisebox{-1.6em}{\includesvg{graphs/interfaces/out-2-3}} \arrow[visible on=<3->]{l}
+\end{tikzcd}
+
+\end{document}

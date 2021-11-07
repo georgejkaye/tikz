@@ -1,0 +1,14 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ xparse }
+\usepackage{ xparse }
+\usepackage{../../macros}
+
+\begin{document}
+
+\begin{tikzcd}[row sep = huge]
+    E_F \arrow{r}{\etargets_F} \arrow{d}{\emap{h}} & {\vt}^\mon_F \arrow{r}{\vconnsr^\mon_F} \arrow{d}{\vmapts{h}} &  {\vs}^\mon_F \arrow{d}{\vmapss{h}} \\
+    E_G \arrow{r}{\etargets_G} & {\vt}^\mon_G \arrow{r}{\vconnsr^\mon_G} & {\vs}^\mon_G
+\end{tikzcd}
+
+\end{document}

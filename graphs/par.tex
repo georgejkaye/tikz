@@ -1,0 +1,14 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ etoolbox }
+\usepackage{ tikzit }
+\input{hypergraphs.tikzstyles}
+
+\newtoggle{graphcaps}
+
+\begin{document}
+   \begin{tikzcd}[row sep = tiny]
+      \iftoggle{graphcaps}{& \scalebox{2}{$F \tensor G$} & \\}{}
+      \tikzfig{graphs/interfaces/in-0-3-4} \arrow{r} & \tikzfig{graphs/operations/par} & \arrow{l} \tikzfig{graphs/interfaces/out-1-2-5}
+   \end{tikzcd}
+\end{document}

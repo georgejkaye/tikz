@@ -1,0 +1,19 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ amsmath }
+\usepackage{ amssymb }
+\usepackage{ stmaryrd }
+\usepackage{ svg }
+\usepackage{ xparse }
+\usepackage{../../macros}
+
+\svgpath{./../../svgs/.}
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = large]
+   \raisebox{-1.3em}{\includesvg{dpo/poc-not-unique/l}} \arrow{d} & \raisebox{-1.3em}{\includesvg{dpo/poc-not-unique/k}} \arrow{l}\arrow{d} \\
+   \raisebox{-1.3em}{\includesvg{dpo/poc-not-unique/g}} & \raisebox{-1.3em}{\includesvg{dpo/poc-not-unique/c-1}} \arrow{l}
+\end{tikzcd}
+
+\end{document}

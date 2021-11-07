@@ -1,0 +1,19 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ amsmath }
+\usepackage{ amssymb }
+\usepackage{ stmaryrd }
+\usepackage{ svg }
+\usepackage{ xparse }
+\usepackage{ kpfonts }
+\usepackage{../../macros}
+
+\svgpath{./../../svgs/.}
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = huge, every label/.append style = {font = \LARGE}]
+   \raisebox{-2em}{\includesvg{dpo/examples/simple/dpo-simple-l}} \hspace{2em} \arrow{r} & \hspace{2em} \raisebox{-4em}{\includesvg{dpo/examples/simple/dpo-simple-g-og}}
+\end{tikzcd}
+
+\end{document}

@@ -1,0 +1,13 @@
+\documentclass{standalone}
+
+\usepackage{ tikz-cd }
+\usepackage{ xparse }
+\usepackage{ macros }
+
+\begin{document}
+    \begin{tikzcd}[column sep=large, row sep=large]
+        A' \arrow[swap]{d}{f_A}\arrow{dr}\arrow[ddr, phantom, "\usebox\pullbackl", near start] & & B' \arrow{d}{f_B}\arrow{dl}\arrow[ddl, phantom, "\usebox\pullbackr", near start] \\
+        A \arrow{dr} & X' \arrow{d}{f} & B \arrow{dl} \\ 
+        & X &
+    \end{tikzcd}
+\end{document}

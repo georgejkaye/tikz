@@ -1,0 +1,18 @@
+\documentclass{standalone}
+\usepackage{ tikz }
+\usepackage{ xparse }
+\usepackage{ amssymb }
+\usepackage{../../macros}
+
+\begin{document}
+\begin{tikzpicture}[yscale=-1,x=1em,y=1.25em]
+
+    \node at (2.25,-1.5) {$\morph{AND}{2}{1}$};
+
+    \draw (0,-0.5) -- (1,-0.5);
+    \draw (0,0.5) -- (1,0.5);
+    \node [draw, minimum width=2.75em, minimum height=2em, anchor=west] at (1,0) {$AND$};
+    \draw (3.75,0) -- (4.75,0);
+
+\end{tikzpicture}
+\end{document}

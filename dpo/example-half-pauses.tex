@@ -1,0 +1,30 @@
+\documentclass[beamer]{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ amsmath }
+\usepackage{ amssymb }
+\usepackage{ stmaryrd }
+\usepackage{ svg }
+\usepackage{ xparse }
+\usepackage{ kpfonts }
+\usepackage{../../macros}
+
+\usepackage{../../beamerpreamble}
+
+\svgpath{./../../svgs/.}
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = huge]
+   |[visible on=<1->]|\raisebox{-1.8em}{\includesvg{dpo/examples/simple/dpo-simple-l}} \arrow[visible on=<2->]{d} &
+   |[visible on=<1->]|\raisebox{-1.8em}{\includesvg{dpo/examples/simple/dpo-simple-k}} \arrow[visible on=<1->]{l}\arrow[visible on=<3->]{d}\arrow[visible on=<1->]{r} &
+   |[visible on=<1->]|\raisebox{-1.8em}{\includesvg{dpo/examples/simple/dpo-simple-r}} \\
+   |[visible on=<2->]|\raisebox{-3.7em}{\includesvg{dpo/examples/simple/dpo-simple-g-og}}
+   & 
+   |[visible on=<3->]|\raisebox{-1em}{\scalebox{3}{\textbf{?}}} \arrow[visible on=<3->]{l}&
+   {}\\
+   {} & 
+   |[visible on=<2->]|\raisebox{-1.8em}{\includesvg{dpo/examples/simple/dpo-simple-j}} \arrow[visible on=<2->]{ul}\arrow[visible on=<3->]{u} &
+   {} 
+\end{tikzcd}
+
+\end{document}

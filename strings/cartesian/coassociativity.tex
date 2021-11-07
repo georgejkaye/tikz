@@ -1,0 +1,15 @@
+\documentclass{standalone}
+\usepackage{ tikzit }
+\usepackage{ etoolbox }
+\usepackage{ tikz-cd }
+\input{hypergraphs.tikzstyles}
+
+\newtoggle{stringtypes}
+
+\begin{document}
+    \begin{tikzcd}[column sep = tiny]
+        \scalebox{0.45}{\tikzfig{strings/cartesian/coassociativity-l\iftoggle{stringtypes}{.types}{}}} &
+        \hspace{-1em}{=}\hspace{-1em} &
+        \scalebox{0.45}{\tikzfig{strings/cartesian/coassociativity-r\iftoggle{stringtypes}{.types}{}}}
+    \end{tikzcd}
+\end{document}

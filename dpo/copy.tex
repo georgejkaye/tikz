@@ -1,0 +1,12 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ tikzit }
+\input{hypergraphs.tikzstyles}
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = tiny]
+   \tikzfig{graphs/copy-rule-l} & \arrow{r} \tikzfig{graphs/interfaces/in-0-out-1-2} \arrow{l} & \tikzfig{graphs/copy-rule-r}
+\end{tikzcd}
+
+\end{document}

@@ -1,0 +1,18 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ amsmath }
+\usepackage{ amssymb }
+\usepackage{ stmaryrd }
+\usepackage{ svg }
+\usepackage{ xparse }
+\usepackage{../../macros}
+
+\svgpath{./../../svgs/.}
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = large]
+    \raisebox{-0.4em}{\includehypergraph{homo-example-1}} \arrow{r} & \raisebox{-0.6em}{\includehypergraph{homo-example-2}}
+\end{tikzcd}
+
+\end{document}

@@ -1,0 +1,24 @@
+\documentclass{standalone}
+\usepackage{ tikz }
+\usepackage{ xparse }
+\usepackage{../../macros}
+\usepackage{amssymb}
+
+\usetikzlibrary{shapes.gates.logic.US}
+
+\begin{document}
+\begin{tikzpicture}[yscale=-1,x=1em,y=1.25em]
+        
+    \draw (-1,0.25) -- (1,0.25);
+    \node [draw, nor gate US, anchor=west, minimum width=2em] at (1,0.5) {};
+    \draw (3.25,0.5) -- (6,0.5);
+    \filldraw (4,0.5) circle (1pt);
+    \draw (4,0.5) -- (4,1.5) -- (0,2.5) -- (0,3.25) -- (1,3.25);
+    \draw (-1, 3.75) -- (1,3.75);
+    \node [draw, nor gate US, anchor=west, minimum width=2em] at (1,3.5) {};
+    \draw (3.25,3.5) -- (6,3.5);
+    \filldraw (4,3.5) circle (1pt);
+    \draw (4,3.5) -- (4,2.5) -- (0,1.5) -- (0,0.75) -- (1,0.75);
+
+\end{tikzpicture}
+\end{document}

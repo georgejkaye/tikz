@@ -1,0 +1,13 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ xparse }
+\usepackage{../../macros}
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = large]
+    E_F \arrow{r}{\etargets[-][F]} \arrow{d}{\emap{h}} & \powerset({\vt_F}) \arrow{d}{\vmapts{h}} \\
+    E_G \arrow{r}{\esources[-][G]} & \powerset({\vt_G})
+\end{tikzcd}
+
+\end{document}

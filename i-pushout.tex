@@ -1,0 +1,12 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ xparse }
+\input{macros/all}
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = large, column sep = large]
+        IF \arrow{r}{In} \arrow{d}{Im} & IH \arrow{d}{q} \\ IG \arrow{r}[swap]{p} & K \arrow[ul, phantom, "\usebox\pushoutr" , very near start, color=black]
+\end{tikzcd}
+
+\end{document}

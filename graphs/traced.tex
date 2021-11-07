@@ -1,0 +1,15 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ svg }
+
+\svgpath{./../../svgs/.}
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = tiny]
+   \raisebox{-1.6em}{\includesvg{graphs/interfaces/in-0-1}} \hspace{1em} \arrow{r} & 
+   \hspace{1em} \raisebox{-3.5em}{\includesvg{graphs/examples/traced}} \hspace{1em} & 
+   \hspace{1em} \raisebox{-1.6em}{\includesvg{graphs/interfaces/out-2-3}} \arrow{l}
+\end{tikzcd}
+
+\end{document}

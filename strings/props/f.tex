@@ -1,0 +1,16 @@
+\documentclass{standalone}
+\usepackage{ tikz }
+\usepackage{ xparse }
+\usepackage{../../../macros}
+
+\begin{document}
+\begin{tikzpicture}[yscale=-1,x=1em,y=1.25em]
+        
+
+    \node at (2.5,-1.5) {$\morph{f}{2}{1}$};
+    \draw (-0.5,0) -- (1.5,0);
+    \draw (-0.5,1) -- (1.5,1);
+    \node[draw,minimum width=2em,minimum height=2.5em] at (2.5,0.5) {$f$};
+    \draw (3.5,0.5) -- (5.5,0.5);
+\end{tikzpicture}
+\end{document}

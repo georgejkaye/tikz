@@ -1,0 +1,16 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ etoolbox }
+\usepackage{ tikzit }
+\input{hypergraphs.tikzstyles}
+
+\newtoggle{graphcaps}
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = tiny]
+   \iftoggle{graphcaps}{& \scalebox{2}{$\trace{1}{f}$} & \\}{}
+   \tikzfig{graphs/interfaces/empty} \arrow{r} & \tikzfig{graphs/operations/trace} & \arrow{l} \tikzfig{graphs/interfaces/out-2}
+\end{tikzcd}
+
+\end{document}

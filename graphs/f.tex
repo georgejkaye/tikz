@@ -1,0 +1,13 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ etoolbox }
+\usepackage{ tikzit }
+\input{hypergraphs.tikzstyles}
+
+\newtoggle{graphcaps}
+
+\begin{document}
+\begin{tikzcd}[row sep = tiny]
+   \tikzfig{graphs/interfaces/in-0} \arrow{r} & \tikzfig{graphs/phi} & \arrow{l} \tikzfig{graphs/interfaces/out-1-2}
+\end{tikzcd}
+\end{document}

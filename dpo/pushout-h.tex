@@ -1,0 +1,13 @@
+\documentclass{standalone}
+
+\usepackage{tikz-cd}
+
+\input{macros/category-tikz}
+
+\begin{document}
+    \begin{tikzcd}[column sep = large]
+        i + j \arrow{d}{c := [c_1,c_2]}\arrow{r}{r := [r_1,r_2]} & R \arrow{d} \\
+        C \arrow{r}{h} & H \arrow[ul, phantom, "\usebox\pushoutr" , very near start, color=black] \\
+        m + n \arrow{u}\arrow{ur} 
+    \end{tikzcd}
+\end{document}

@@ -1,0 +1,16 @@
+\documentclass{standalone}
+\usepackage{ tikz }
+\usepackage{ xparse }
+\usepackage{../../macros}
+
+\begin{document}
+\begin{tikzpicture}[yscale=-1,x=1em,y=1.25em]
+
+    \node at (1.5,-1.25) {$\morph{\delay_t}{1}{1}$};
+
+    \draw (0,0) -- (1,0);
+    \draw (1.5,0) circle (0.5em);
+    \draw (2,0) -- (3,0);
+
+\end{tikzpicture}
+\end{document}

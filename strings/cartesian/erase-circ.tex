@@ -1,0 +1,21 @@
+\documentclass{standalone}
+\usepackage{ tikz }
+\usetikzlibrary{shapes}
+\usetikzlibrary{plotmarks}
+\usepackage{ xparse }
+\usepackage{../../../macros}
+
+\begin{document}
+\begin{tikzpicture}[yscale=-1,x=1em,y=1.25em]
+        
+    \node at (0.25,-1) {$\morph{\cdel{n}}{n}{0}$};
+
+    \draw (-1,0) -- (1,0);
+    \node at (0,0.35) {\scalebox{0.6}{$\vdots$}};
+    \draw (-1,1) -- (1,1);
+
+    \filldraw (1,0) circle (2pt);
+    \filldraw (1,1) circle (2pt);
+
+\end{tikzpicture}
+\end{document}

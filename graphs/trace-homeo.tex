@@ -1,0 +1,15 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ svg }
+\usepackage{ etoolbox }
+
+\svgpath{./../../svgs/.}
+
+\newtoggle{graphcaps}
+
+\begin{document}
+\begin{tikzcd}[row sep = tiny]
+   \iftoggle{graphcaps}{& \scalebox{2}{$\trace{1}{f}$} & \\}{}
+   \raisebox{-1.4em}{\includesvg{graphs/operations/empty}} \arrow{r} & \raisebox{-2.75em}{\includesvg{graphs/operations/trace-hom}} & \arrow{l} \raisebox{-1.4em}{\includesvg{graphs/interfaces/out-2}}
+\end{tikzcd}
+\end{document}

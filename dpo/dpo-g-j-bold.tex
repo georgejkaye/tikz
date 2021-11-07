@@ -1,0 +1,12 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ xparse }
+\usepackage{../../macros}
+
+\begin{document}
+\begin{tikzcd}
+    L \arrow{d} & K \arrow{l}\arrow{r}\arrow{d} & R \arrow{d}\\
+    \scalebox{1.5}{\textbf{G}} \arrow[ur, phantom, "\usebox\pushoutl" , very near start, color=black] & C \arrow{l} \arrow{r} & H \arrow[ul, phantom, "\usebox\pushoutr" , very near start, color=black] \\
+    & \scalebox{1.5}{\textbf{J}} \arrow{ul}\arrow{ur}\arrow{u} &
+\end{tikzcd}
+\end{document}

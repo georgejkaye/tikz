@@ -1,0 +1,20 @@
+\documentclass{standalone}
+\usepackage{ tikz }
+
+\begin{document}
+\begin{tikzpicture}[yscale=-1,x=1em,y=1.25em]
+        
+    \node [anchor=east] at (0,0) {$A$};
+    \draw (0,0) -- (1,0);
+    \node [draw, minimum width = 1.5em, anchor=west] at (1,0) {$f$};
+    \draw (2.5,0) -- (3.5,0);
+    \node [draw, circle, fill=white, scale=0.4] at (3.5,0) {};
+
+    \node at (5.5,0) {$=$};
+
+    \node [anchor=east] at (8.5,0) {$A$};
+    \draw (8.5,0) -- (9.5,0);
+    \node [draw, circle, fill=white, scale=0.4] at (9.5,0) {};
+
+\end{tikzpicture}
+\end{document}

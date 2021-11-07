@@ -1,0 +1,14 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ svg }
+
+\svgpath{./../../svgs/.}
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = huge, every label/.append style = {font = \LARGE}]
+   \includesvg{dpo/examples/simple/dpo-simple-l} \arrow{d} \\
+   \includesvg{dpo/examples/simple/dpo-simple-g}
+\end{tikzcd}
+
+\end{document}

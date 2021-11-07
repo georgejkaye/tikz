@@ -1,0 +1,27 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ amsmath }
+\usepackage{ amssymb }
+\usepackage{ stmaryrd }
+\usepackage{ svg }
+\usepackage{ xparse }
+\usepackage{../../macros}
+
+\svgpath{./../../svgs/.}
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = large]
+    \raisebox{-0.3em}{\includehypergraph{dpo/example-l-linear}} \arrow{d} & 
+    & 
+    & 
+    & 
+    \raisebox{-1em}{\includehypergraph{dpo/example-r-linear}} \\
+    \raisebox{-1em}{\includehypergraph{dpo/example-g-int}} &
+    & & 
+    & 
+    & \\
+    & & &
+\end{tikzcd}
+
+\end{document}

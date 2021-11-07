@@ -1,0 +1,29 @@
+\documentclass{standalone}
+\usepackage{ tikz }
+\usepackage{ xparse }
+\usepackage{ amssymb }
+\usepackage{../../macros}
+
+\begin{document}
+\begin{tikzpicture}[yscale=-1,x=1em,y=1.25em]
+
+    \node at (3.6,-2) {$v \tensor \cdots \tensor u \seq k = w$};
+
+    \node [draw, minimum width=1.25em, minimum height=1em, anchor=east] at (0,-0.5) {\scalebox{0.75}{$v$}};
+    \node [draw, minimum width=1.25em, minimum height=1em, anchor=east] at (0,0.5) {\scalebox{0.75}{$u$}};
+
+    \node at (0.5,-0.15) {\scalebox{0.6}{$\vdots$}};
+
+    \draw (0,-0.5) -- (1,-0.5);
+    \draw (0,0.5) -- (1,0.5);
+    \node [draw, minimum width=2.75em, minimum height=2em, anchor=west] at (1,0) {$k$};
+    \draw (3.75,0) -- (4.75,0);
+
+    \node at (6,0) {$=$};
+
+    \node [draw, minimum width=1.25em, minimum height=1em, anchor=east] at (8.5,0) {\scalebox{0.75}{$w$}};
+
+    \draw(8.5,0) -- (9.5,0);
+
+\end{tikzpicture}
+\end{document}

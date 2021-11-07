@@ -1,0 +1,15 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ amsmath }
+\usepackage{ amssymb }
+\usepackage{ stmaryrd }
+\usepackage{ svg }
+\usepackage{ xparse }
+\input{macros/all}
+\svgpath{./../svgs/.}
+
+\begin{document}
+\begin{tikzcd}
+    L{\raisebox{-1em}{\includehypergraph{dpo/example-l}}} \arrow{r} & G{\raisebox{-1.5em}{\includehypergraph{dpo/example-g}}}
+\end{tikzcd}
+\end{document}

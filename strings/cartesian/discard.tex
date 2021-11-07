@@ -1,0 +1,11 @@
+\documentclass{standalone}
+\usepackage{ tikzit }
+\usepackage{ etoolbox }
+\input{hypergraphs.tikzstyles}
+
+\newtoggle{stringtypes}
+\toggletrue{stringtypes}
+
+\begin{document}
+    {\tikzfig{strings/cartesian/discard\iftoggle{stringtypes}{.types}{}}}
+\end{document}

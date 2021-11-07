@@ -1,0 +1,15 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ svg }
+\usepackage{ etoolbox }
+
+\svgpath{./../../svgs/.}
+
+\newtoggle{graphcaps}
+
+\begin{document}
+\begin{tikzcd}[row sep = tiny]
+   \iftoggle{graphcaps}{& \scalebox{2}{$G$} & \\}{}
+   \tikzfig{graphs/interfaces/in-3-4} \arrow{r} & \tikzfig{graphs/psi} & \arrow{l} \tikzfig{graphs/interfaces/out-5}
+\end{tikzcd}
+\end{document}

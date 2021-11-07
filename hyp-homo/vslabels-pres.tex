@@ -1,0 +1,13 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ xparse }
+\usepackage{../../macros}
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = large]
+    \vs_F \arrow{r}{\vslabels_F} \arrow{d}{\vmaps{h}} & {\vhypsig} \arrow{d}{\id} \\
+    \vs_G \arrow{r}{\vslabels_G} & {\vhypsig}
+\end{tikzcd}
+
+\end{document}

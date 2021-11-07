@@ -1,0 +1,17 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ etoolbox }
+\usepackage{ tikzit }
+\input{hypergraphs.tikzstyles}
+
+\newtoggle{graphcaps}
+\newtoggle{graphinterfaces}
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = tiny]
+   \iftoggle{graphcaps}{& \scalebox{2}{$\id[0]$} & \\}{}
+   \iftoggle{graphinterfaces}{\tikzfig{graphs/interfaces/empty} \arrow{r} & }{}\tikzfig{graphs/empty} \iftoggle{graphinterfaces}{& \arrow{l} \tikzfig{graphs/interfaces/empty}}{}
+\end{tikzcd}
+
+\end{document}

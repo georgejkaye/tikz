@@ -1,0 +1,14 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ etoolbox }
+\usepackage{ tikzit }
+\input{hypergraphs.tikzstyles}
+
+\newtoggle{graphcaps}
+
+\begin{document}
+   \begin{tikzcd}[row sep = tiny]
+      \iftoggle{graphcaps}{& \scalebox{2}{$\swap{1}{1}$} & \\}{}
+      \tikzfig{graphs/interfaces/in-0-1} \arrow{r} & \tikzfig{graphs/operations/sym} & \arrow{l} \tikzfig{graphs/interfaces/out-2-3}
+   \end{tikzcd}
+\end{document}

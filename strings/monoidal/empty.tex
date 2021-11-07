@@ -1,0 +1,19 @@
+\documentclass{standalone}
+\usepackage{ tikzit }
+\usepackage{ etoolbox }
+\usepackage{ macros }
+
+\input{hypergraphs.tikzstyles}
+
+\newtoggle{stringcaps}
+
+\toggletrue{stringcaps}
+
+\begin{document}
+    \begin{tabular}{c}
+    \iftoggle{stringcaps}{
+        \rule[-2ex]{0pt}{0pt}$\morph{\id[I]}{I}{I}$\\
+    }{}
+    \tikzfig{strings/monoidal/empty}
+    \end{tabular}
+\end{document}

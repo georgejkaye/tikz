@@ -1,0 +1,24 @@
+\documentclass[varwidth]{standalone}
+\usepackage{ tikzit }
+\usepackage{ etoolbox }
+\usepackage{ macros }
+\usepackage{ stmaryrd }
+
+\input{hypergraphs.tikzstyles}
+
+\newtoggle{stringcaps}
+\newtoggle{stringtypes}
+
+\toggletrue{stringcaps}
+\toggletrue{stringtypes}
+
+\begin{document}
+\begin{tabular}{c}
+    \iftoggle{stringcaps}{
+        \rule[-2ex]{0pt}{0pt}$\swap{A}{B} \tensor \id[C] \seq \id[B] \tensor \swap{A}{C} = \swap{A}{B \tensor C}$\\
+    }{}
+    \tikzfig{strings/symmetric/hexagon-l\iftoggle{stringtypes}{.types}{}}
+    $=$
+    \tikzfig{strings/symmetric/hexagon-r\iftoggle{stringtypes}{.types}{}}
+    \end{tabular}
+\end{document}

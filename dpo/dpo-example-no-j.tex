@@ -1,0 +1,19 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ amsmath }
+\usepackage{ amssymb }
+\usepackage{ stmaryrd }
+\usepackage{ svg }
+\usepackage{ xparse }
+\input{macros/all}
+
+\svgpath{./../svgs/.}
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = large]
+    {L \raisebox{-1em}{\includehypergraph{dpo/example-l}}} \arrow{d} & K \raisebox{-1.2em}{\includehypergraph{dpo/example-k}} \arrow{l} \arrow{r} \arrow{d} & R \raisebox{-1.4em}{\includehypergraph{dpo/example-r}} \arrow{d} \\
+    G \raisebox{-1.6em}{\includehypergraph{dpo/example-g}} & C \raisebox{-1.6em}{\includehypergraph{dpo/example-c}} \arrow{l} \arrow{r} & H \raisebox{-2em}{\includehypergraph{dpo/example-h}}
+\end{tikzcd}
+
+\end{document}

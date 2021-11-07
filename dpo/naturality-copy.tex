@@ -1,0 +1,19 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ amsmath }
+\usepackage{ amssymb }
+\usepackage{ stmaryrd }
+\usepackage{ svg }
+\usepackage{ xparse }
+\usepackage{ xparse }
+\usepackage{../../macros}
+
+\svgpath{./../../svgs/.}
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = large]
+    \raisebox{-0.6em}{\includehypergraph{axioms/naturality-copy-lhs-trimmed}} & \raisebox{-0.25em}{\includehypergraph{axioms/naturality-copy-interface}} \arrow{l}\arrow{r} & \raisebox{-1.05em}{\includehypergraph{axioms/naturality-copy-rhs-trimmed}}
+\end{tikzcd}
+
+\end{document}

@@ -1,0 +1,13 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ xparse }
+\usepackage{../../macros}
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = large]
+    1\arrow{r}{\vt[-][F]} \arrow{d}{\id} & {\vt_F} \arrow{d}{\vmapts{h}} \\
+    1\arrow{r}{\vt[-][G]} & {\vt_G} 
+\end{tikzcd}
+
+\end{document}

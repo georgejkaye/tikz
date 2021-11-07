@@ -1,0 +1,13 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ svg }
+
+\svgpath{./../../svgs/.}
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = tiny]
+   \raisebox{-1.6em}{\includesvg{graphs/interfaces/in-0-1-annotated}} \arrow{r} & \raisebox{-3.5em}{\includesvg{graphs/examples/traced-annotated}} & \arrow{l} \raisebox{-1.6em}{\includesvg{graphs/interfaces/in-0-1-annotated}}
+\end{tikzcd}
+
+\end{document}

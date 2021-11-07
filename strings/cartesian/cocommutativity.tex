@@ -1,0 +1,14 @@
+\documentclass{standalone}
+\usepackage{ tikzit }
+\usepackage{ tikz-cd }
+\usepackage{ etoolbox }
+\input{hypergraphs.tikzstyles}
+
+\newtoggle{stringtypes}
+\toggletrue{stringtypes}
+
+\begin{document}
+    \begin{tikzcd}[column sep = tiny]
+        \scalebox{0.45}{\tikzfig{strings/cartesian/cocommutativity-l\iftoggle{stringtypes}{.types}{}}} & \hspace{-1em}{=}\hspace{-1em} & \scalebox{0.45}{\tikzfig{strings/cartesian/copy\iftoggle{stringtypes}{.types}{}}}
+    \end{tikzcd}
+\end{document}

@@ -1,0 +1,21 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ amsmath }
+\usepackage{ amssymb }
+\usepackage{ stmaryrd }
+\usepackage{ svg }
+\usepackage{ xparse }
+\usepackage{ kpfonts }
+\usepackage{../../macros}
+
+\svgpath{./../../svgs/.}
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = huge, every label/.append style = {font = \LARGE}]
+   \raisebox{-1.5em}{\includesvg{graphs/operations/identity}} \hspace{1em} & 
+   \hspace{1em} \raisebox{-1.5em}{\includesvg{dpo/examples/left-linear/dpo-left-linear-k}} \hspace{1em} \arrow{l} \arrow{r} &
+   \hspace{1em} \raisebox{-1.9em}{\includesvg{graphs/examples/h}} 
+\end{tikzcd}
+
+\end{document}

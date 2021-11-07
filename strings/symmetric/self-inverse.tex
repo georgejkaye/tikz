@@ -1,0 +1,24 @@
+\documentclass[varwidth]{standalone}
+\usepackage{ tikzit }
+\usepackage{ etoolbox }
+\usepackage{ macros }
+\usepackage{ stmaryrd }
+
+\input{hypergraphs.tikzstyles}
+
+\newtoggle{stringcaps}
+\newtoggle{stringtypes}
+
+\toggletrue{stringcaps}
+\toggletrue{stringtypes}
+
+\begin{document}
+\begin{tabular}{c}
+    \iftoggle{stringcaps}{
+        \rule[-2ex]{0pt}{0pt}$\swap{A}{B} \seq \swap{B}{A} = \id[A \tensor B]$\\
+    }{}
+    \tikzfig{strings/symmetric/self-inverse-l\iftoggle{stringtypes}{.types}{}}
+    $=$
+    \tikzfig{strings/symmetric/self-inverse-r\iftoggle{stringtypes}{.types}{}}
+    \end{tabular}
+\end{document}

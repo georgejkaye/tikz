@@ -1,0 +1,14 @@
+\documentclass{standalone}
+
+\usepackage{ tikz-cd }
+\usepackage{ tikzit }
+
+\input{hypergraphs.tikzstyles}
+
+\begin{document}
+    \begin{tikzcd}
+        & \tikzfig{graphs/alpha} \arrow{dl}\arrow{dr} & \\
+        \tikzfig{graphs/beta-alpha} \arrow{dr} & & \tikzfig{graphs/gamma-alpha} \arrow{dl} \\
+        & \tikzfig{graphs/beta-gamma-alpha} & \\
+    \end{tikzcd}
+\end{document}

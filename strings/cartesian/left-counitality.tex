@@ -1,0 +1,16 @@
+\documentclass{standalone}
+\usepackage{ tikzit }
+\usepackage{ tikz-cd }
+\usepackage{ etoolbox }
+
+\input{hypergraphs.tikzstyles}
+
+\newtoggle{stringtypes}
+
+\begin{document}
+    \begin{tikzcd}[column sep = tiny]
+        \scalebox{0.45}{\tikzfig{strings/cartesian/right-counitality-l\iftoggle{stringtypes}{.types}{}}} & 
+        \hspace{-1em}{=}\hspace{-1em} & 
+        \scalebox{0.45}{\tikzfig{strings/category/identity\iftoggle{stringtypes}{.types}{}}}
+    \end{tikzcd}
+\end{document}

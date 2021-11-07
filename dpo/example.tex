@@ -1,0 +1,17 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ tikzit }
+\input{hypergraphs.tikzstyles}
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = huge]
+   \tikzfig{graphs/copy-rule-l} \arrow{d} &
+   \tikzfig{graphs/interfaces/in-0-out-1-2} \arrow{l}\arrow{r}\arrow{d} &
+   \tikzfig{graphs/copy-rule-r} \arrow{d} \\
+   \tikzfig{dpo/example-g} &
+   {} & {} \\
+   {} & {} & {} 
+\end{tikzcd}
+
+\end{document}

@@ -1,0 +1,30 @@
+\documentclass{standalone}
+\usepackage{ tikz }
+\usepackage{ xparse }
+\input{macros/all}
+
+\begin{document}
+\begin{tikzpicture}[yscale=-1,x=1em,y=1.25em]
+        
+    \draw[rounded corners] (18, 9) -- (22, 9) -- (22, 2) -- (-1, 2) -- (-1, 9) -- (3, 9) -- (5, 10) -- (8, 10);
+    \draw[rounded corners] (18, 8) -- (21, 8) -- (21, 3) -- (0, 3) -- (0, 8) -- (3, 8) -- (5, 9) -- (6, 9) -- (7, 8) -- (8, 8);
+    \draw[rounded corners] (18, 7) -- (20, 7) -- (20, 4) -- (1, 4) -- (1, 7) -- (3, 7) -- (5, 8) -- (6, 8) -- (7, 9) -- (8, 9);
+    \draw[rounded corners] (18, 6) -- (19, 6) -- (19, 5) -- (2, 5) -- (2, 6) -- (3, 6) -- (5, 7) -- (8, 7);
+
+    \draw[rounded corners] (-2, 10) -- (3, 10) -- (5,6) -- (8,6);
+
+    \node[draw, minimum height = 6em, minimum width = 5.5em, anchor = west] at (8, 8){$\shuffle_{\leq_0}$};
+
+    \draw[rounded corners] (13.5, 6) -- (16.5, 6);
+    \draw[rounded corners] (13.5, 7) -- (14.5, 7) -- (15.5, 8) -- (16.5, 8);
+    \draw[rounded corners] (13.5, 8) -- (14.5, 8) -- (15.5, 7) -- (16.5, 7);
+    \draw[rounded corners] (13.5, 9) -- (16.5, 9);
+    \draw[rounded corners] (13.5, 10) -- (23, 10);
+
+    \node[draw, minimum height = 1.25em, minimum width = 1.5em, anchor = west] at (16.5,6){\scalebox{0.6}{$x$}};
+    \node[draw, minimum height = 1.25em, minimum width = 1.5em, anchor = west] at (16.5,7){\scalebox{0.6}{$g$}};
+    \node[draw, minimum height = 1.25em, minimum width = 1.5em, anchor = west] at (16.5,8){\scalebox{0.6}{$f$}};
+    \node[draw, minimum height = 1.25em, minimum width = 1.5em, anchor = west] at (16.5,9){\scalebox{0.6}{$y$}};
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,14 @@
+\documentclass{standalone}
+
+\usepackage{ tikz-cd }
+\usepackage{ xparse }
+\usepackage{ macros }
+
+\begin{document}
+    \begin{tikzcd}[column sep = large, row sep = large]
+        & A \arrow{dl}\arrow{dr}{f}\arrow{d} & \\
+        A \arrow{d}[swap]{m}\arrow{dr}[swap,yshift=2em, xshift=-0.3em]{f} & A \arrow{dl}[swap,yshift=1.5em, xshift=1.5em]{m}\arrow{dr}[swap,yshift=2.5em, xshift=-0.5em]{f} & C \arrow{d}\arrow{dl} \\ 
+        B \arrow{dr}{g} & C\arrow{d}{n} & C \arrow{dl}{n} \\
+        & D &
+    \end{tikzcd}
+\end{document}

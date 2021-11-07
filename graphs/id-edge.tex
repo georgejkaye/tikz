@@ -1,0 +1,16 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ svg }
+\usepackage{ etoolbox }
+
+\svgpath{./../../svgs/.}
+
+\newtoggle{graphinterfaces}
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = tiny]
+   \iftoggle{graphinterfaces}{\raisebox{-1.4em}{\includesvg{graphs/interfaces/in-0}} \arrow{r} &}{}\raisebox{-2.25em}{\includesvg{graphs/operations/id-edge\iftoggle{graphinterfaces}{}{-no-numbers}}} \iftoggle{graphinterfaces}{& \arrow{l} \raisebox{-1.4em}{\includesvg{graphs/interfaces/out-1}}}{}
+\end{tikzcd}
+
+\end{document}

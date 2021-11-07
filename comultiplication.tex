@@ -1,0 +1,15 @@
+\documentclass{standalone}
+\usepackage{ tikz }
+\usepackage{ xparse }
+\input{macros/all}
+
+\begin{document}
+\begin{tikzpicture}[yscale=-1,x=1em,y=1.25em]
+        
+    \draw [rounded corners] (0.75,1) -- (1.25,0.5) -- (1.75,0.5);
+    \draw [rounded corners] (0.75,1) -- (1.25,1.5) -- (1.75,1.5);
+    \filldraw (0.75,1) circle (2pt);
+    \draw (0,1) -- (0.75,1);
+
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,21 @@
+\documentclass{standalone}
+\usepackage{ tikzit }
+\usepackage{ etoolbox }
+\usepackage{ macros }
+
+\input{hypergraphs.tikzstyles}
+
+\newtoggle{stringcaps}
+\newtoggle{stringtypes}
+
+\toggletrue{stringcaps}
+\toggletrue{stringtypes}
+
+\begin{document}
+    \begin{tabular}{c}
+    \iftoggle{stringcaps}{
+        \rule[-2ex]{0pt}{0pt}$\morph{f}{A}{B}$\\
+    }{}
+    \tikzfig{strings/category/f\iftoggle{stringtypes}{.types}{}}
+    \end{tabular}
+\end{document}

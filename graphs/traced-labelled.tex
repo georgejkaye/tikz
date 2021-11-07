@@ -1,0 +1,13 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ svg }
+
+\svgpath{./../../svgs/.}
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = tiny, every label/.append style = {font = \normalsize}]
+   \raisebox{-1.6em}{\includesvg{graphs/interfaces/in-0-1}} \arrow{r}[swap]{p} & \raisebox{-3.5em}{\includesvg{graphs/examples/traced}} & \arrow{l}{q} \raisebox{-1.6em}{\includesvg{graphs/interfaces/out-2-3}}
+\end{tikzcd}
+
+\end{document}

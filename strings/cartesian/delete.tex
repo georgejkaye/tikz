@@ -1,0 +1,17 @@
+\documentclass{standalone}
+\usepackage{ tikz }
+\usetikzlibrary{shapes}
+\usetikzlibrary{plotmarks}
+\usepackage{ xparse }
+\usepackage{../../../macros}
+
+\begin{document}
+\begin{tikzpicture}[yscale=-1,x=1em,y=1.25em]
+        
+    \node at (0.3,-2) {$\morph{\cdel{A}}{A}{I}$};
+
+    \node [anchor=east] at (-1,0) {$A$};
+    \draw (-1,0) -- (0,0);
+    \node[draw, minimum height = 2.2em, minimum width = 2.2em, anchor = west] at (0,0){$\cdel{A}$};
+\end{tikzpicture}
+\end{document}

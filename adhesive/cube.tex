@@ -1,0 +1,14 @@
+\documentclass{standalone}
+
+\usepackage{ tikz-cd }
+\usepackage{ xparse }
+\usepackage{ macros }
+
+\begin{document}
+    \begin{tikzcd}[column sep = large, row sep = large]
+        & E \arrow{dl}\arrow{dr}\arrow{d} & \\
+        F \arrow{d}\arrow{dr} & A \arrow{dl}\arrow{dr} & G \arrow{d}\arrow{dl} \\ 
+        B \arrow{dr} & H\arrow{d} & C \arrow{dl} \\
+        & D &
+    \end{tikzcd}
+\end{document}

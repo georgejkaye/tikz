@@ -1,0 +1,13 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ tikzit }
+\input{hypergraphs.tikzstyles}
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = tiny]
+   \tikzfig{graphs/alpha} \arrow{d} & \arrow{r} \tikzfig{graphs/interfaces/in-0-out-1} \arrow{l} & \tikzfig{graphs/alpha} \\
+   \tikzfig{graphs/dpo/matchings/inputs-outputs/beta-gamma}
+\end{tikzcd}
+
+\end{document}

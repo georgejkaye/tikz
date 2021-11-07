@@ -1,0 +1,18 @@
+\documentclass{standalone}
+\usepackage{ tikz }
+\usepackage{ xparse }
+\usepackage{../../macros}
+
+\begin{document}
+\begin{tikzpicture}[yscale=-1,x=1em,y=1.25em]
+        
+
+    \node at (-1,0) {$A$};
+    \node at (6,0) {$B$};
+
+    \node at (2.5,-1.5) {$\morph{f}{A}{B}$};
+    \draw  (-0.5,0) -- (1.5,0);
+    \node[draw,minimum width=2em,minimum height=2em] at (2.5,0) {$f$};
+    \draw (3.5,0) -- (5.5,0);
+\end{tikzpicture}
+\end{document}

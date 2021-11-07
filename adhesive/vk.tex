@@ -1,0 +1,13 @@
+\documentclass{standalone}
+
+\usepackage{ tikz-cd }
+\usepackage{ xparse }
+\usepackage{ macros }
+
+\begin{document}
+    \begin{tikzcd}
+        & A \arrow{dl}\arrow{dr} & \\ 
+        B \arrow{dr} & & C \arrow{dl} \\
+        & D \arrow[uu, phantom, "\usebox\pushoutu" , very near start, color=black] &
+    \end{tikzcd}
+\end{document}

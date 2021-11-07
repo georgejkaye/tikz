@@ -1,0 +1,19 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ amsmath }
+\usepackage{ amssymb }
+\usepackage{ stmaryrd }
+\usepackage{ svg }
+\usepackage{ xparse }
+\usepackage{ kpfonts }
+\usepackage{../../macros}
+
+\svgpath{./../../svgs/.}
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = huge]
+   \raisebox{-1.8em}{\includesvg{dpo/examples/simple/dpo-simple-l}} & \raisebox{-1.8em}{\includesvg{dpo/examples/simple/dpo-simple-k}} \arrow{l}\arrow{r} & \raisebox{-1.8em}{\includesvg{dpo/examples/simple/dpo-simple-r}}
+\end{tikzcd}
+
+\end{document}

@@ -1,0 +1,19 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ amsmath }
+\usepackage{ amssymb }
+\usepackage{ stmaryrd }
+\usepackage{ svg }
+\usepackage{ xparse }
+\usepackage{../../macros}
+
+\svgpath{./../../svgs/.}
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = large, column sep = large]
+   \raisebox{-0.2em}{\includesvg{dpo/not-ll/l}} \arrow{d} & \raisebox{-0.2em}{\includesvg{dpo/not-ll/k}} \arrow{l}\arrow{d}\arrow{r} & \raisebox{-1.3em}{\includesvg{dpo/not-ll/r}} \arrow{d} \\
+   \raisebox{-1.3em}{\includesvg{dpo/not-ll/g}} & \raisebox{-1.3em}{\includesvg{dpo/not-ll/c-1}} \arrow{l}\arrow{r} & \raisebox{-1.3em}{\includesvg{dpo/not-ll/h-1}}
+\end{tikzcd}
+
+\end{document}

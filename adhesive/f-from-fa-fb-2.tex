@@ -1,0 +1,14 @@
+\documentclass{standalone}
+
+\usepackage{ tikz-cd }
+\usepackage{ xparse }
+\usepackage{ macros }
+
+\begin{document}
+    \begin{tikzcd}[column sep=large, row sep=large]
+        & A' \cap B' \arrow{dl}\arrow{d}\arrow{dr}\arrow[ddl, phantom, "\usebox\pullbackr", near start]\arrow[ddr, phantom, "\usebox\pullbackl", near start] & \\
+        A' \arrow[swap]{d}{f_A}\arrow{dr} & A \cap B \arrow{dl}\arrow{dr} & B' \arrow{d}{f_B}\arrow{dl} \\
+        A\arrow{dr} & X' \arrow[u, phantom, "\usebox\pushoutu", near start]\arrow[dashed]{d}{f} & B \arrow{dl} \\ 
+        & X &
+    \end{tikzcd}
+\end{document}

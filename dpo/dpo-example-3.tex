@@ -1,0 +1,20 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ amsmath }
+\usepackage{ amssymb }
+\usepackage{ stmaryrd }
+\usepackage{ svg }
+\usepackage{ xparse }
+\usepackage{../../macros}
+
+\svgpath{./../../svgs/.}
+
+\begin{document}
+    
+\begin{tikzcd}[]
+    \raisebox{-0.65em}{\includehypergraph{dpo/example-l}} \arrow{d} & \raisebox{-0.15em}{\includehypergraph{dpo/example-k}} \arrow{l} \arrow{r} \arrow{d} & \raisebox{-1em}{\includehypergraph{dpo/example-r}} \arrow{d} \\
+    \raisebox{-1em}{\includehypergraph{dpo/example-g}} & \raisebox{-0.75em}{\includehypergraph{dpo/example-c}} \arrow{l} \arrow{r} & \raisebox{-0.65em}{\includehypergraph{dpo/example-h}}\\
+    & \includehypergraph{dpo/example-j} \arrow{ur}\arrow{u}\arrow{ul} &
+\end{tikzcd}
+
+\end{document}

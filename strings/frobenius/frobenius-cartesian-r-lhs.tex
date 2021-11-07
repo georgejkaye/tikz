@@ -1,0 +1,20 @@
+\documentclass{standalone}
+\usepackage{ tikz }
+\usepackage{ xparse }
+\usepackage{../../../macros}
+
+\begin{document}
+\begin{tikzpicture}[yscale=-1,x=1em,y=1.25em]
+        
+    \node [draw, anchor=east, minimum width=1.1em] at (6,0.25) {\scalebox{0.5}{$f$}};
+    \node [draw, anchor=east, minimum width=1.1em] at (6,1.75) {\scalebox{0.5}{$g$}};
+    \draw [rounded corners] (6,0.25) -- (6.5,0.25) -- (7,1);
+    \draw [rounded corners] (6,1.75) -- (6.5,1.75) -- (7,1);
+    \filldraw (7,1) circle (1.5pt);
+    \draw (7,1) -- (8.5,1);
+    \filldraw (8.5,1) circle (1.5pt);
+    \draw [rounded corners] (8.5,1) -- (9,0.5) -- (9.5,0.5);
+    \draw [rounded corners] (8.5,1) -- (9,1.5) -- (9.5,1.5);
+
+\end{tikzpicture}
+\end{document}

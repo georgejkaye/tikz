@@ -1,0 +1,24 @@
+\documentclass{standalone}
+\usepackage{ tikz }
+\usepackage{ xparse }
+\usepackage{../../../macros}
+
+\begin{document}
+\begin{tikzpicture}[yscale=-1,x=1em,y=1.25em]
+
+    \node (F) [draw, anchor=east, minimum size=1.4em, fill=white] at (0,0) {\scalebox{0.5}{$f$}};
+    \node (G1) [draw, anchor=east, minimum size=1.4em, fill=white] at (0,1.5) {\scalebox{0.5}{$g$}};
+    \node (G2) [draw, anchor=east, minimum size=1.4em, fill=white] at (0,3) {\scalebox{0.5}{$g$}};
+
+    \node (C1) [draw, circle, fill=white, scale=0.4] at (1.5,0.75) {};
+
+    \coordinate (O1) at (3,0.75);
+    \coordinate (O2) at (3,3);
+
+    \draw (F) to[out=0, in=255] (C1);
+    \draw (G1) to[out=0, in=105] (C1);
+    \draw (G2) to (O2);
+    \draw (C1) to (O1);
+
+\end{tikzpicture}
+\end{document}

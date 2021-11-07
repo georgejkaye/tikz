@@ -1,0 +1,22 @@
+\documentclass{standalone}
+\usepackage{ tikz }
+\usepackage{ xparse }
+\usepackage{../../macros}
+
+\begin{document}
+\begin{tikzpicture}[yscale=-1,x=1em,y=1.25em]
+
+    \node at (1.4,-1.25) {$v \seq \stub = \stub$};
+
+    \node [draw, minimum width=1em, minimum height=1em] at (-0.5,0) {\scalebox{0.75}{$v$}};
+
+    \draw (0,0) -- (1,0);
+    \filldraw (1,0) circle (1pt);
+
+    \node at (2,0) {$=$};
+
+    \draw (3,0) -- (4,0);
+    \filldraw (4,0) circle (1pt);
+
+\end{tikzpicture}
+\end{document}

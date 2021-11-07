@@ -1,0 +1,22 @@
+\documentclass{standalone}
+\usepackage{ tikz }
+\usetikzlibrary{shapes}
+\usetikzlibrary{plotmarks}
+\usepackage{ xparse }
+\usepackage{../../../macros}
+
+\begin{document}
+\begin{tikzpicture}[yscale=-1,x=1em,y=1.25em]
+    \node [anchor=east] at (-1,0) {$I$};
+    \draw [dashed] (-1,0) -- (0,0);
+    \node (C1) [draw, circle, fill=white, scale=0.4] at (0,0) {};
+    \node (A1) [anchor=west] at (1,-0.5) {$I$};
+    \node (A2) [anchor=west] at (1,0.5) {$I$};
+    \draw [dashed] (C1) to[color=lightgray, out=285, in=180] (A1);
+    \draw [dashed] (C1) to[out=75, in=180] (A2);
+
+    \node at (3,0) {$=$};
+
+    \node[draw,dashed,minimum width=2em,minimum height=2em] at (5,0) {};
+\end{tikzpicture}
+\end{document}

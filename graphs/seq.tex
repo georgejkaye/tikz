@@ -1,0 +1,14 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ etoolbox }
+\usepackage{ tikzit }
+\input{hypergraphs.tikzstyles}
+
+\newtoggle{graphcaps}
+
+\begin{document}
+   \begin{tikzcd}[row sep = tiny]
+      \iftoggle{graphcaps}{& \scalebox{2}{$F \seq G$} & \\}{}
+      \tikzfig{graphs/interfaces/in-0} \arrow{r} & \tikzfig{graphs/operations/seq} & \arrow{l} \tikzfig{graphs/interfaces/out-5}
+   \end{tikzcd}
+\end{document}

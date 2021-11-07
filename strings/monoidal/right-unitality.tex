@@ -1,0 +1,24 @@
+\documentclass[varwidth]{standalone}
+\usepackage{ tikzit }
+\usepackage{ etoolbox }
+\usepackage{ macros }
+\usepackage{ stmaryrd }
+
+\input{hypergraphs.tikzstyles}
+
+\newtoggle{stringcaps}
+\newtoggle{stringtypes}
+
+\toggletrue{stringcaps}
+\toggletrue{stringtypes}
+
+\begin{document}
+\begin{tabular}{c}
+    \iftoggle{stringcaps}{
+        \rule[-2ex]{0pt}{0pt}$f \tensor \id[B] = f$\\
+    }{}
+    \tikzfig{strings/monoidal/right-unitality\iftoggle{stringtypes}{.types}{}}
+    $=$
+    \tikzfig{strings/monoidal/f\iftoggle{stringtypes}{.types}{}}
+    \end{tabular}
+\end{document}

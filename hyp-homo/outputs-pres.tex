@@ -1,0 +1,13 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ xparse }
+\usepackage{../../macros}
+
+\begin{document}
+    
+\begin{tikzcd}[row sep = large]
+    1 \arrow{r}{\vs[-][F]} \arrow{d}{\id} & {\vs_F} \arrow{d}{\vmapss{h}} \\
+    1 \arrow{r}{\vs[-][G]} & {\vs_G} 
+\end{tikzcd}
+
+\end{document}

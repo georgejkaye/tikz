@@ -1,0 +1,19 @@
+\documentclass{standalone}
+\usepackage{ tikz }
+\usepackage{ xparse }
+\usepackage{ amssymb }
+\usepackage{../../macros}
+
+\begin{document}
+\begin{tikzpicture}[yscale=-1,x=1em,y=1.25em]
+
+    \node at (2,-1.75) {$\morph{\mathsf{m}}{3}{1}$};
+
+    \draw (0,-0.5) -- (1,-0.5);
+    \draw (0,0.25) -- (1,0.25);
+    \draw (0, 1) -- (1,1);
+    \node [draw, minimum width=2em, minimum height=3em, anchor=west] at (1,0.25) {$\mf{m}$};
+    \draw (3,0.25) -- (4,0.25);
+
+\end{tikzpicture}
+\end{document}

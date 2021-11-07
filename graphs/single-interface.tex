@@ -1,0 +1,14 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ svg }
+\usepackage{ etoolbox }
+
+\svgpath{./../../svgs/.}
+
+\newtoggle{cospanlabels}
+
+\begin{document}
+   \begin{tikzcd}[row sep = tiny, every label/.append style = {font = \normalsize}]
+      \raisebox{-1.6em}{\includesvg{graphs/operations/empty}} \arrow{r} & \raisebox{-3.5em}{\includesvg{graphs/examples/traced}} & \arrow{l}{\iftoggle{cospanlabels}{p + q}{}} \raisebox{-1.6em}{\includesvg{graphs/interfaces/in-0-1-out-2-3}}
+   \end{tikzcd}
+\end{document}
