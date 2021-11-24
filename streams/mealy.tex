@@ -1,0 +1,16 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+\usepackage{ quiver }
+
+\begin{document}
+    \begin{tikzcd}
+        & {g_{\mathsf{t}}} \\
+        g && {g_\mathsf{\top}} \\
+        & {g_{\mathsf{f}}}
+        \arrow["{\mathsf{t} \,|\, \mathsf{t}}", curve={height=-12pt}, from=2-1, to=1-2]
+        \arrow["{\mathsf{f} \,|\, \mathsf{f}}"', curve={height=12pt}, from=2-1, to=3-2]
+        \arrow["{\top \,|\, \top}", curve={height=-12pt}, from=1-2, to=2-3]
+        \arrow["{\top \,|\,\top}"', curve={height=12pt}, from=3-2, to=2-3]
+        \arrow["{\top \,|\, \top}", from=2-1, to=2-3]
+    \end{tikzcd}
+\end{document}
