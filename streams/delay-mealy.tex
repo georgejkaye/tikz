@@ -1,0 +1,17 @@
+\documentclass{standalone}
+\usepackage{ tikz }
+\usetikzlibrary{ automata, positioning, arrows}
+
+\tikzset{->, >=stealth, node distance=3cm, every state/.style={thick, fill=gray!10}, initial text=$ $}
+
+\begin{document}
+
+    \begin{tikzpicture}
+        \node[state] (bot) {$\bot$};
+        \node[state, right of=bot] (true) {$\mathsf{t}$};
+        \node[state, right of=true] (false) {$\mathsf{f}$};
+        \node[state, right of=false] (top) {$\top$};
+    \end{tikzpicture}
+
+   
+\end{document}

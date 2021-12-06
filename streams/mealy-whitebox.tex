@@ -5,18 +5,19 @@
 \begin{document}
     \begin{tikzcd}
         & {\mathsf{t}}
-        \arrow[loop, swap, distance=1.5em, "{\bot,\mathsf{t} \,|\, \mathsf{t}}", from=1-2, to=1-2] \\
+        \arrow[loop, swap, distance=2em, "{\bot,\mathsf{t} \,|\, \mathsf{t}}", from=1-2, to=1-2] \\
         (\bot)
         \arrow[loop left, "{\bot \,|\,\bot}"] 
         &
         & {\top} 
         \arrow[loop right, "{\bot,\mathsf{t},\mathsf{f},\top \,|\,\top}"] \\
         & {\mathsf{f}}
-        \arrow[loop, swap, distance=1.5em, "{\mathsf{f} \,|\, \mathsf{f}}"] \\
+        \arrow[loop, swap, distance=2em, "{\mathsf{f} \,|\, \mathsf{f}}"] \\
         \arrow["{\mathsf{t} \,|\, \mathsf{t}}", curve={height=-12pt}, from=2-1, to=1-2]
         \arrow["{\mathsf{f} \,|\, \mathsf{f}}"', curve={height=12pt}, from=2-1, to=3-2]
         \arrow["{\mathsf{f}, \top \,|\, \top}", curve={height=-12pt}, from=1-2, to=2-3]
         \arrow["{\mathsf{t}, \top \,|\, \top}"', curve={height=12pt}, from=3-2, to=2-3]
         \arrow["{\top \,|\, \top}", curve={height=-12pt}, from=2-1, to=2-3]
+        \arrow["{\bot \,|\, \top}", curve={height=-12pt}, from=2-3, to=2-1]
     \end{tikzcd}
 \end{document}
