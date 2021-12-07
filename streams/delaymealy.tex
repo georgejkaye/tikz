@@ -3,11 +3,8 @@
 \usepackage{ tikz }
 \usetikzlibrary{automata, positioning, arrows}
 
-\tikzset{->, >=stealth, node distance=3cm, every state/.style={thick, fill=gray!10}, initial text=$ $, every edge/.append style={font=\tiny}
-}
-
 \begin{document}
-    \begin{tikzpicture}
+    \begin{tikzpicture}[->, >=stealth, node distance=3cm, every state/.style={thick, fill=gray!10}, initial text=$ $, every edge/.append style={font=\tiny}]
         \node[state] (bot) {$\bot$};
         \node[state, below of=bot] (f) {$\mathsf{f}$};
         \node[state, right of=f] (top) {$\top$};
