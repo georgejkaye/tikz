@@ -5,13 +5,11 @@
 
 \begin{document}
     \begin{tikzpicture}[->, >=stealth, node distance=3cm, every state/.style={thick, fill=gray!10}, initial text=$ $, every edge/.append style={font=\tiny}]
-        \node[state] (v) {$v$};
+        \node[state, accepting] (v) {$v$};
         \node[state, right of=v] (bot) {$\bot$};
 
-        \draw (v) edge[bend left, above] node{$ \mathsf{t} \,|\, v$} (bot)
-              (v) edge[bend right, above] node {$ \mathsf{f} \,|\, v$} (bot)
-              (v) edge[bend right=75, above] node{$ \top \,|\, v$} (bot)
-              (v) edge[bend left=75, above] node{$ \bot \,|\, v$} (bot)
+        \draw (v) edge[above] node{$ () \,|\, v$} (bot)
+              (bot) edge[loop right] node{$ () \,|\, \bot$} (bot)
         ;
     \end{tikzpicture}
 \end{document}

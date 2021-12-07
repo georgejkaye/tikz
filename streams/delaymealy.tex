@@ -5,7 +5,7 @@
 
 \begin{document}
     \begin{tikzpicture}[->, >=stealth, node distance=3cm, every state/.style={thick, fill=gray!10}, initial text=$ $, every edge/.append style={font=\tiny}]
-        \node[state] (bot) {$\bot$};
+        \node[state, accepting] (bot) {$\bot$};
         \node[state, below of=bot] (f) {$\mathsf{f}$};
         \node[state, right of=f] (top) {$\top$};
         \node[state, left of=f] (t) {$\mathsf{t}$};
