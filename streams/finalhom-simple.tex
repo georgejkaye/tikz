@@ -1,0 +1,14 @@
+\documentclass{standalone}
+\usepackage{ tikz-cd }
+
+\input{ macros/letters }
+\input{ macros/streams }
+
+\begin{document}
+\begin{tikzcd}[row sep = large, column sep = large]
+    S \arrow{r}{h} \arrow{d}[swap]{\langle O,T \rangle} & 
+    M^\omega \to N^\omega \arrow{d}{\langle \mathsf{hd},\mathsf{tl} \rangle } \\
+    (N \times S)^M \arrow{r}{Rh} &
+    (N \times M^\omega \to N^\omega)^M 
+\end{tikzcd}
+\end{document}
