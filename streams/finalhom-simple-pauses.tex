@@ -1,0 +1,22 @@
+\documentclass[beamer]{standalone}
+\usepackage{ tikz-cd }
+
+\input{ macros/letters }
+\input{ macros/streams }
+
+\tikzset{
+    invisible/.style={opacity=0},
+    visible on/.style={alt={#1{}{invisible}}},
+    alt/.code args={<#1>#2#3}{%
+      \alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}}%
+  }
+}
+
+\begin{document}
+\begin{tikzcd}[row sep = large, column sep = large]
+    S \arrow{r}{h} \arrow{d}[swap]{\langle O,T \rangle} & 
+    |[visible on=<1->]|M^\omega \to N^\omega \arrow{d}{\langle \mathsf{hd},\mathsf{tl} \rangle } \\
+    (N \times S)^M \arrow{r}{Rh} &
+    |[visible on=<1->]|(N \times (M^\omega \to N^\omega))^M 
+\end{tikzcd}
+\end{document}
