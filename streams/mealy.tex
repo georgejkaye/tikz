@@ -1,22 +1,32 @@
 \documentclass{standalone}
-\usepackage{ tikz-cd }
-\usepackage{ quiver }
+
+\usepackage{ tikz }
+\usetikzlibrary{automata, positioning, arrows}
+
+\newcommand{\trs}[2]{#1 \,|\, #2}
 
 \begin{document}
-    \begin{tikzcd}
-        & {g_{\mathsf{t}}}
-        \arrow[loop, swap, distance=3em, "{\bot,\mathsf{t} \,|\, \mathsf{t}}", from=1-2, to=1-2] \\
-        (g)
-        \arrow[loop left, "{\bot \,|\,\bot}"] 
-        &
-        & {g_\mathsf{\top}} 
-        \arrow[loop right, "{\bot,\mathsf{t},\mathsf{f},\top \,|\,\top}"] \\
-        & {g_{\mathsf{f}}}
-        \arrow[loop, swap, "{\mathsf{f} \,|\, \mathsf{f}}"] \\
-        \arrow["{\mathsf{t} \,|\, \mathsf{t}}", curve={height=-12pt}, from=2-1, to=1-2]
-        \arrow["{\mathsf{f} \,|\, \mathsf{f}}"', curve={height=12pt}, from=2-1, to=3-2]
-        \arrow["{\mathsf{f}, \top \,|\, \top}", curve={height=-12pt}, from=1-2, to=2-3]
-        \arrow["{\mathsf{t}, \top \,|\, \top}"', curve={height=12pt}, from=3-2, to=2-3]
-        \arrow["{\top \,|\, \top}", curve={height=-12pt}, from=2-1, to=2-3]
-    \end{tikzcd}
+\begin{tikzpicture}[->, >=stealth, node distance=3cm, every state/.style={thick, fill=gray!10}, initial text=$ $, every edge/.append style={font=\tiny}, yscale=-1, x=5em, y=1.5em]
+    \node[state, accepting] (s0) at (0,0) {$s_0$};
+    \node[state] (s1) at (1,-3) {$s_1$};     
+    \node[state] (s2) at (1,-1) {$s_2$};     
+    \node[state] (s3) at (1,1) {$s_3$};     
+    \node[state] (s4) at (1,3) {$s_4$};     
+    \node[state] (s5) at (3,0) {$s_5$};  
+    
+    \draw (s0) edge[bend right, above left] node{$\trs{\bot}{\mathsf{t}\bot}$} (s1);
+    \draw (s0) edge[bend right, above] node{$\trs{\mathsf{t}}{\mathsf{t}\mathsf{t}}$} (s2);
+    \draw (s0) edge[bend left, below] node{$\trs{\mathsf{f}}{\mathsf{t}\mathsf{f}}$} (s3);
+    \draw (s0) edge[bend left, below left] node{$\trs{\top}{\mathsf{t}\top}$} (s4);
+
+    \draw (s1) edge[bend right=65, above right, pos=0.2] node{$\trs{\_}{\bot\mathsf{f}}$} (s5);
+    \draw (s2) edge[bend right=55, above right, pos=0.35] node{$\trs{\_}{\bot\mathsf{f}}$} (s5);
+    \draw (s3) edge[bend right=45, above right, pos=0.5] node{$\trs{\_}{\bot\mathsf{f}}$} (s5);
+    \draw (s4) edge[bend right=35, above right, pos=0.65] node{$\trs{\_}{\bot\mathsf{f}}$} (s5);
+
+    \draw (s5) edge[bend right=35, below, pos=0.2] node{$\trs{\bot}{\bot\bot}$} (s1);
+    \draw (s5) edge[bend right=45, below, pos=0.35] node{$\trs{\mathsf{t}}{\bot\mathsf{t}}$} (s2);
+    \draw (s5) edge[bend right=55, below, pos=0.5] node{$\trs{\mathsf{f}}{\bot\mathsf{f}}$} (s3);
+    \draw (s5) edge[bend right=65, below right, pos=0.65] node{$\trs{\bot}{\bot\top}$} (s4);
+\end{tikzpicture}
 \end{document}
