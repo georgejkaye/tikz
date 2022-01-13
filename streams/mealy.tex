@@ -15,9 +15,9 @@
     \node[state] (s5) at (3,0) {$s_5$};  
     
     \draw (s0) edge[bend right, above left] node{$\trs{\bot}{\mathsf{t}\bot}$} (s1);
-    \draw (s0) edge[bend right, above] node{$\trs{\mathsf{t}}{\mathsf{t}\mathsf{t}}$} (s2);
-    \draw (s0) edge[bend left, below] node{$\trs{\mathsf{f}}{\mathsf{t}\mathsf{f}}$} (s3);
-    \draw (s0) edge[bend left, below left] node{$\trs{\top}{\mathsf{t}\top}$} (s4);
+    \draw (s0) edge[bend right, above] node{$\trs{\mathsf{t}}{\mathsf{t}\bot}$} (s2);
+    \draw (s0) edge[bend left, below] node{$\trs{\mathsf{f}}{\mathsf{t}\bot}$} (s3);
+    \draw (s0) edge[bend left, below left] node{$\trs{\top}{\mathsf{t}\bot}$} (s4);
 
     \draw (s1) edge[bend right=65, above right, pos=0.2] node{$\trs{\_}{\bot\bot}$} (s5);
     \draw (s2) edge[bend right=55, above right, pos=0.35] node{$\trs{\_}{\bot\mathsf{t}}$} (s5);
